@@ -13,7 +13,7 @@ after_succes:
   - docker build -t jacm80/multi-nginx ./nginx
   - docker build -t jacm80/multi-server ./server
   - docker build -t jacm80/multi-worker ./worker
-  # Log in to docker CLI
+  # Log in to docker CLI -------------------------------------------------
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
   - docker push jacm80/multi-client
